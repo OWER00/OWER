@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OWER | Mening saytim</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <header class="navbar">
+        <a href="/" class="logo">OWER<span>.</span></a>
+
+        <nav>
+            <a href="#home">Bosh sahifa</a>
+            <a href="#about">Men haqimda</a>
+            <a href="#contact">Aloqa</a>
+        </nav>
+
+        <a href="#about" class="nav-button">Boshlash ↗</a>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="badge">
+                <span class="status-dot"></span>
+                Mening birinchi loyiham
+            </div>
+
+            <h1>
+                Salom, dunyo!<br>
+                <span>Men OWER.</span>
+            </h1>
+
+            <p class="description">
+                Men Python va Flask yordamida zamonaviy veb-saytlar
+                yaratishni o‘rganyapman. Bu mening ilk loyiham!
+            </p>
+
+            <div class="buttons">
+                <a href="#about" class="primary-button">Men haqimda →</a>
+                <a href="#contact" class="secondary-button">Bog‘lanish</a>
+            </div>
+
+            <div class="tech-list">
+                <span>PYTHON</span>
+                <span>FLASK</span>
+                <span>HTML</span>
+                <span>CSS</span>
+            </div>
+        </section>
+
+        <section class="info" id="about">
+            <div class="info-card">
+                <div class="card-icon">🐍</div>
+                <h2>Python</h2>
+                <p>Saytning ichki ishlashini boshqaradigan dasturlash tili.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="card-icon">⚡</div>
+                <h2>Flask</h2>
+                <p>Python yordamida veb-saytlar yaratish uchun vosita.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="card-icon">🎨</div>
+                <h2>Dizayn</h2>
+                <p>HTML va CSS orqali sahifalarni chiroyli ko‘rinishga keltiramiz.</p>
+            </div>
+        </section>
+
+        <footer id="contact">
+            <p>© 2026 OWER. Birinchi loyiham ❤️</p>
+        </footer>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(ellipse at 50% 0%, #29104b 0%, transparent 45%),
+        radial-gradient(ellipse at 0% 55%, #160b2a 0%, transparent 35%),
+        #050509;
+    color: #f5f0ff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.navbar {
+    padding: 24px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffffff12;
+    background: #050509aa;
+    backdrop-filter: blur(15px);
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #a855f7;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #b7aec9;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d8b4fe;
+    text-shadow: 0 0 15px #a855f7;
+}
+
+.nav-button,
+.primary-button {
+    display: inline-block;
+    padding: 13px 21px;
+    background: linear-gradient(135deg, #9333ea, #6d28d9);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 7px;
+    border: 1px solid #c084fc55;
+    box-shadow: 0 0 22px #7e22ce25;
+    transition: 0.3s;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+    box-shadow: 0 0 28px #a855f780;
+    transform: translateY(-3px);
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 120px 20px 100px;
+    background:
+        radial-gradient(ellipse at 50% 45%, #6d28d922, transparent 55%),
+        linear-gradient(180deg, #0c0715aa, transparent);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border: 1px solid #a855f744;
+    background: #7e22ce12;
+    color: #d8b4fe;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    background: #c084fc;
+    box-shadow: 0 0 12px #c084fc;
+}
+
+.hero h1 {
+    font-size: clamp(44px, 7vw, 82px);
+    line-height: 1.15;
+    font-weight: 900;
+    letter-spacing: -3px;
+    text-shadow: 0 0 35px #a855f718;
+}
+
+.hero h1 span {
+    color: #c084fc;
+    text-shadow: 0 0 35px #9333ea55;
+}
+
+.description {
+    max-width: 560px;
+    margin: 26px auto 32px;
+    color: #aaa1bd;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.secondary-button {
+    display: inline-block;
+    padding: 13px 21px;
+    border: 1px solid #ffffff25;
+    color: #eee5ff;
+    text-decoration: none;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.secondary-button:hover {
+    border-color: #c084fc;
+    box-shadow: 0 0 20px #9333ea30;
+}
+
+.tech-list {
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tech-list span {
+    color: #b6a9ca;
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 10px 14px;
+    border: 1px solid #ffffff16;
+    background: #ffffff05;
+}
+
+.info {
+    max-width: 1050px;
+    margin: 15px auto 90px;
+    padding: 0 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.info-card {
+    padding: 30px;
+    background: linear-gradient(145deg, #15101f, #0a0a11);
+    border: 1px solid #ffffff12;
+    border-top: 1px solid #a855f733;
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-6px);
+    border-color: #a855f766;
+    box-shadow: 0 10px 35px #7e22ce18;
+}
+
+.card-icon {
+    font-size: 29px;
+    margin-bottom: 22px;
+}
+
+.info-card h2 {
+    font-size: 20px;
+    margin-bottom: 13px;
+}
+
+.info-card p {
+    color: #aaa1bd;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+footer {
+    text-align: center;
+    padding: 28px;
+    border-top: 1px solid #ffffff12;
+    color: #81758f;
+    font-size: 13px;
+    background: #050509;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 20px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .hero {
+        padding: 85px 18px 70px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* OWER — DARK ANIME THEME */
+
+body {
+    background-color: #050508;
+    background-image:
+        radial-gradient(ellipse at 75% 15%, #32104b55, transparent 38%),
+        radial-gradient(ellipse at 15% 65%, #240b3a33, transparent 35%);
+    color: #f5f0ff;
+}
+
+/* Sirli binafsha atmosfera */
+.hero {
+    background:
+        radial-gradient(ellipse at 50% 20%, #6d28d91c, transparent 55%),
+        linear-gradient(180deg, #08050d, #050508);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Sarlavha */
+.hero h1 {
+    color: #f8f5ff;
+    text-shadow: 0 0 35px #a855f71c;
+}
+
+.hero h1 span {
+    color: #c4a1ff;
+    text-shadow: 0 0 25px #9333ea55;
+}
+
+/* Qorong‘i anime kartochkalari */
+.info-card {
+    background: linear-gradient(145deg, #120d1b, #09080e);
+    border: 1px solid #ffffff12;
+    box-shadow: 0 8px 30px #00000030;
+}
+
+.info-card:hover {
+    border-color: #a855f755;
+    box-shadow: 0 8px 35px #7e22ce20;
+    transform: translateY(-5px);
+}
+
+/* Binafsha tuman kayfiyati */
+.badge {
+    background: #160d23;
+    border-color: #a855f744;
+    color: #d8b4fe;
+}
+
+/* Neon tugmalar */
+.primary-button,
+.nav-button {
+    background: linear-gradient(135deg, #7e22ce, #4c1d95);
+    box-shadow: 0 0 20px #9333ea25;
+}
+
+.primary-button:hover,
+.nav-button:hover {
+    box-shadow: 0 0 28px #a855f766;
+}
+
+/* Minimalistik qora fon */
+footer {
+    background: #050508;
+    border-color: #ffffff12;
+}
+
+/* OWER — PURPLE ABSTRACT ATMOSPHERE */
+
+body {
+    background-color: #030207;
+    background-image:
+        radial-gradient(ellipse at 50% 0%, #8b2cff55 0%, transparent 40%),
+        radial-gradient(ellipse at 10% 45%, #6515b855 0%, transparent 35%),
+        radial-gradient(ellipse at 90% 70%, #a020f044 0%, transparent 35%);
+    background-attachment: fixed;
+}
+
+/* Yorqin, binafsha tuman */
+.hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: transparent;
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(65px);
+    animation: purpleMist 10s ease-in-out infinite alternate;
+}
+
+.hero::before {
+    width: 420px;
+    height: 300px;
+    top: 5%;
+    left: calc(50% - 210px);
+    background: #8b2cff55;
+}
+
+.hero::after {
+    width: 300px;
+    height: 250px;
+    bottom: 0;
+    right: 5%;
+    background: #c026ff44;
+    animation-delay: -5s;
+}
+
+@keyframes purpleMist {
+    0% {
+        transform: translate(-35px, 15px) scale(0.9);
+        opacity: 0.45;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translate(35px, -20px) scale(1.2);
+        opacity: 0.65;
+    }
+}
+
+/* Yorug‘likning yumshoq tarqalishi */
+.hero h1 span {
+    color: #d8a4ff;
+    text-shadow:
+        0 0 12px #a855f7,
+        0 0 35px #9333ea99,
+        0 0 70px #7e22ce55;
+}
+
+/* Kartochkalardagi binafsha nur */
+.info-card {
+    background: linear-gradient(145deg,
+            #1b0d2b,
+            #09060f 75%);
+    border: 1px solid #a855f744;
+    box-shadow: 0 0 25px #7e22ce12;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 0 20px #9333ea44,
+        0 0 45px #7e22ce22;
+}
+
+/* Binafsha yorug‘likli tugmalar */
+.primary-button,
+.nav-button {
+    box-shadow: 0 0 22px #9333ea44;
+}
+
+.primary-button:hover,
+.nav-button:hover {
+    box-shadow: 0 0 35px #a855f799;
+}
+
+/* Harakatni kamaytirishni afzal ko‘rganlar uchun */
+@media (prefers-reduced-motion: reduce) {
+
+    .hero::before,
+    .hero::after {
+        animation: none;
+    }
+}
