@@ -4,76 +4,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OWER</title>
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="OWER — katta g‘oyalar va yangi imkoniyatlar sari.">
+    <title>OWER — Beyond Limits</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
 </head>
 
 <body>
     <header class="navbar">
-        <a href="/" class="logo">OWER<span>.</span></a>
+        <a href="#home" class="logo">OWER<span>.</span></a>
 
         <nav>
             <a href="#home">Bosh sahifa</a>
-            <a href="#about">Men haqimda</a>
+            <a href="#about">Brend haqida</a>
             <a href="#contact">Aloqa</a>
         </nav>
 
-        <a href="#about" class="nav-button">Boshlash ↗</a>
+        <a href="#about" class="nav-button">Kashf etish <span>↗</span></a>
     </header>
 
     <main>
         <section class="hero" id="home">
-            <div class="badge">
-                <span class="status-dot"></span>
-                Mening birinchi loyiham
+            <div class="hero-content">
+                <div class="badge">
+                    <span class="status-dot"></span>
+                    Yangi g‘oyalar sari
+                </div>
+
+                <h1 class="hero-title">OWER<span>.</span></h1>
+
+                <p class="tagline">BUILT TO GO BEYOND.</p>
+
+                <p class="description">
+                    Katta g‘oyalar shu yerdan boshlanadi.
+                    Bu — OWER brendining ilk qadami.
+                </p>
+
+                <div class="buttons">
+                    <a href="#about" class="primary-button">
+                        Biz haqimizda <span>↗</span>
+                    </a>
+                    <a href="#contact" class="secondary-button">
+                        Bog‘lanish
+                    </a>
+                </div>
+
+                <div class="tech-list">
+                    <span>VISION</span>
+                    <span class="list-dot">•</span>
+                    <span>INNOVATION</span>
+                    <span class="list-dot">•</span>
+                    <span>FUTURE</span>
+                </div>
             </div>
 
-            <h1>OWER</h1>
-
-            <p class="description">
-                Men Python va Flask yordamida zamonaviy veb-saytlar
-                yaratishni o‘rganyapman. Bu mening ilk loyiham!
-            </p>
-
-            <div class="buttons">
-                <a href="#about" class="primary-button">Men haqimda →</a>
-                <a href="#contact" class="secondary-button">Bog‘lanish</a>
-            </div>
-
-            <div class="tech-list">
-                <span>PYTHON</span>
-                <span>FLASK</span>
-                <span>HTML</span>
-                <span>CSS</span>
+            <div class="hero-bottom">
+                <span>INDEPENDENT BRAND</span>
+                <span>EST. 2026</span>
             </div>
         </section>
 
         <section class="info" id="about">
-            <div class="info-card">
-                <div class="card-icon">🐍</div>
-                <h2>Python</h2>
-                <p>Saytning ichki ishlashini boshqaradigan dasturlash tili.</p>
+            <div class="section-heading">
+                <span class="eyebrow">THE BEGINNING</span>
+                <h2>Bu — faqat boshlanishi<span>.</span></h2>
+                <p>Bugun birinchi qadam. Ertaga esa undan ham kattaroq maqsadlar.</p>
             </div>
 
             <div class="info-card">
-                <div class="card-icon">⚡</div>
-                <h2>Flask</h2>
-                <p>Python yordamida veb-saytlar yaratish uchun vosita.</p>
+                <span class="card-number">01</span>
+                <h3>Vision</h3>
+                <p>Katta maqsadlar va kelajak uchun aniq qarash.</p>
             </div>
 
             <div class="info-card">
-                <div class="card-icon">🎨</div>
-                <h2>Dizayn</h2>
-                <p>HTML va CSS orqali sahifalarni chiroyli ko‘rinishga keltiramiz.</p>
+                <span class="card-number">02</span>
+                <h3>Innovation</h3>
+                <p>Yangi g‘oyalar, zamonaviy texnologiyalar va ijodkorlik.</p>
+            </div>
+
+            <div class="info-card">
+                <span class="card-number">03</span>
+                <h3>Growth</h3>
+                <p>Har kuni rivojlanish va OWER brendini yangi bosqichga olib chiqish.</p>
             </div>
         </section>
 
         <footer id="contact">
-            <p>© 2026 OWER. Birinchi loyiham ❤️</p>
+            <a href="#home" class="footer-logo">OWER<span>.</span></a>
+            <p>Built to Go Beyond.</p>
+            <span class="copyright">© 2026 OWER. All rights reserved.</span>
         </footer>
     </main>
-
 </body>
 
 </html>
