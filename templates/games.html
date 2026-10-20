@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10091b">
+    <meta name="description" content="OWER GAMES — o‘yinlar, sharhlar va gaming profillar.">
+    <title>OWER GAMES</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .games-page {
+
+            .games-menu {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+                gap: 22px;
+            }
+
+            .games-menu a {
+                color: #d8c8e8;
+                text-decoration: none;
+                font-size: 13px;
+                transition: color 0.2s ease;
+            }
+
+            .games-menu a:hover {
+                color: #c084fc;
+            }
+
+            @media (max-width: 700px) {
+                .games-nav {
+                    align-items: flex-start;
+                    flex-direction: column;
+                    gap: 18px;
+                }
+
+                .games-menu {
+                    justify-content: flex-start;
+                    gap: 15px;
+                }
+            }
+
+            min-height: 100vh;
+            color: #fff;
+            background: radial-gradient(ellipse at 50% 0%, rgba(126, 34, 206, .24), transparent 55%),
+            #10091b;
+        }
+
+        .games-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 24px 7%;
+            border-bottom: 1px solid rgba(192, 132, 252, .15);
+        }
+
+        .games-logo {
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .games-logo span {
+            color: #b78aff;
+        }
+
+        .games-back {
+            color: #e9d5ff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .games-hero {
+            text-align: center;
+            padding: 85px 7% 45px;
+        }
+
+        .games-label {
+            color: #c084fc;
+            font-size: 12px;
+            letter-spacing: .25em;
+        }
+
+        .games-hero h1 {
+            font-size: clamp(42px, 8vw, 82px);
+            line-height: 1.1;
+            margin: 20px 0;
+            letter-spacing: -2px;
+        }
+
+        .games-hero h1 span {
+            color: #b78aff;
+        }
+
+        .games-hero p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: #c4b5d4;
+            line-height: 1.8;
+        }
+
+        .games-content {
+            max-width: 1150px;
+            margin: auto;
+            padding: 20px 7% 90px;
+        }
+
+        .games-tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 25px 0 35px;
+        }
+
+        .games-search {
+            flex: 1;
+            min-width: 200px;
+            padding: 14px 17px;
+            color: white;
+            background: #1b1028;
+            border: 1px solid rgba(192, 132, 252, .3);
+            border-radius: 12px;
+            outline: none;
+            font: inherit;
+        }
+
+        .games-search:focus {
+            border-color: #b78aff;
+        }
+
+        .games-filter {
+            padding: 14px;
+            color: white;
+            background: #1b1028;
+            border: 1px solid rgba(192, 132, 252, .3);
+            border-radius: 12px;
+            font: inherit;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .games-card {
+            padding: 22px;
+            border-radius: 17px;
+            border: 1px solid rgba(168, 85, 247, .22);
+            background: linear-gradient(145deg, #211331, #140d1e);
+            transition: .25s ease;
+        }
+
+        .games-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(192, 132, 252, .7);
+            box-shadow: 0 8px 28px rgba(124, 58, 237, .12);
+        }
+
+        .games-card .game-symbol {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .games-card small {
+            color: #c084fc;
+            letter-spacing: .12em;
+            font-size: 10px;
+        }
+
+        .games-card h3 {
+            margin: 10px 0;
+            font-size: 19px;
+        }
+
+        .games-card p {
+            color: #bdb2ce;
+            font-size: 13px;
+            line-height: 1.7;
+            min-height: 44px;
+        }
+
+        .game-tag {
+            display: inline-block;
+            margin-top: 8px;
+            color: #d8b4fe;
+            font-size: 11px;
+        }
+
+        .no-games {
+            display: none;
+            color: #c4b5d4;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .games-extra {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 65px;
+        }
+
+        .games-extra article {
+            padding: 25px;
+            border: 1px solid rgba(168, 85, 247, .22);
+            border-radius: 16px;
+            background: rgba(30, 17, 46, .65);
+        }
+
+        .games-extra h3 {
+            margin-top: 0;
+        }
+
+        .games-extra p {
+            color: #bdb2ce;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .games-footer {
+            padding: 25px 7%;
+            border-top: 1px solid rgba(192, 132, 252, .15);
+            color: #9c8bab;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        @media (max-width: 800px) {
+            .games-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .games-extra {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .games-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .games-hero {
+                padding-top: 60px;
+            }
+
+            .games-hero h1 {
+                letter-spacing: -1px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="games-page">
+        <header class="games-nav">
+            <a class="games-logo" href="/">OWER<span>.</span></a>
+
+            <nav class="games-menu">
+                <a href="#catalog">O‘yinlar</a>
+                <a href="#reviews">Sharhlar</a>
+                <a href="#player-ids">Gaming ID</a>
+                <a href="#donate">Donat xizmati</a>
+                <a href="/" class="games-back">← Bosh sahifa</a>
+            </nav>
+        </header>
+
+
+        <section class="games-hero">
+            <span class="games-label">THE WORLD OF GAMING</span>
+            <h1>OWER <span>GAMES.</span></h1>
+            <p>O‘yinlar olami. Sevimli o‘yinlarim, shaxsiy tajribam, sharhlarim va gaming profilim — barchasi bir joyda.
+            </p>
+        </section>
+
+        <main class="games-content">
+            <h2 id="catalog">O‘yinlar katalogi<span style="color:#b78aff">.</span></h2>
+            <p style="color:#bdb2ce">O‘yin nomini qidir yoki janr bo‘yicha tanla.</p>
+
+            <div class="games-tools">
+                <input class="games-search" id="gameSearch" type="search" placeholder="🔎 O‘yin qidirish..."
+                    aria-label="O‘yin qidirish">
+                <select class="games-filter" id="gameFilter" aria-label="Janr bo‘yicha saralash">
+                    <option value="all">Barcha janrlar</option>
+                    <option value="action">Action</option>
+                    <option value="shooter">Shooter</option>
+                    <option value="rpg">RPG</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="racing">Racing</option>
+                    <option value="other">Boshqa</option>
+                </select>
+            </div>
+
+            <div class="games-grid" id="gamesGrid">
+                <article class="games-card" data-name="blood strike" data-genre="shooter">
+                    <div class="game-symbol">🎯</div><small>MOBILE · FPS</small>
+                    <h3>Blood Strike</h3>
+                    <p>Tezkor janglar va raqobatga boy shooter.</p><span class="game-tag">★ Mening o‘yinim</span>
+                </article>
+                <article class="games-card" data-name="free fire" data-genre="shooter">
+                    <div class="game-symbol">🔥</div><small>MOBILE · BATTLE ROYALE</small>
+                    <h3>Free Fire</h3>
+                    <p>Omon qolish va jamoaviy janglar.</p><span class="game-tag">Gaming</span>
+                </article>
+                <article class="games-card" data-name="roblox" data-genre="other">
+                    <div class="game-symbol">🧊</div><small>ONLINE · SANDBOX</small>
+                    <h3>Roblox</h3>
+                    <p>Turli rejimlar, dunyolar va ijodiy tajribalar.</p><span class="game-tag">Gaming</span>
+                </article>
+                <article class="games-card" data-name="assassins creed black flag" data-genre="adventure">
+                    <div class="game-symbol">🏴‍☠️</div><small>ADVENTURE · ACTION</small>
+                    <h3>Assassin’s Creed IV: Black Flag</h3>
+                    <p>Dengiz sarguzashtlari va yashirin janglar.</p><span class="game-tag">Story game</span>
+                </article>
+                <article class="games-card" data-name="assassins creed rogue" data-genre="adventure">
+                    <div class="game-symbol">🗡️</div><small>ADVENTURE · ACTION</small>
+                    <h3>Assassin’s Creed Rogue</h3>
+                    <p>Tarixiy sarguzasht va jangovar topshiriqlar.</p><span class="game-tag">Story game</span>
+                </article>
+                <article class="games-card" data-name="grand theft auto v gta 5" data-genre="action">
+                    <div class="game-symbol">🚘</div><small>OPEN WORLD · ACTION</small>
+                    <h3>GTA V</h3>
+                    <p>Katta ochiq dunyo va turli missiyalar.</p><span class="game-tag">Open world</span>
+                </article>
+                <article class="games-card" data-name="grand theft auto san andreas gta sa" data-genre="action">
+                    <div class="game-symbol">🌴</div><small>OPEN WORLD · ACTION</small>
+                    <h3>GTA: San Andreas</h3>
+                    <p>Klassik ochiq dunyo sarguzashti.</p><span class="game-tag">Classic</span>
+                </article>
+                <article class="games-card" data-name="devil may cry" data-genre="action">
+                    <div class="game-symbol">⚔️</div><small>HACK · SLASH</small>
+                    <h3>Devil May Cry</h3>
+                    <p>Uslubli janglar va kuchli qahramonlar.</p><span class="game-tag">Action</span>
+                </article>
+                <article class="games-card" data-name="nier replicant" data-genre="rpg">
+                    <div class="game-symbol">🌙</div><small>RPG · ACTION</small>
+                    <h3>NieR Replicant</h3>
+                    <p>Hikoya, janglar va sirli dunyo.</p><span class="game-tag">RPG</span>
+                </article>
+                <article class="games-card" data-name="dark souls 3" data-genre="rpg">
+                    <div class="game-symbol">🛡️</div><small>SOULSLIKE · RPG</small>
+                    <h3>Dark Souls III</h3>
+                    <p>Murakkab janglar va qorong‘i fantaziya.</p><span class="game-tag">RPG</span>
+                </article>
+                <article class="games-card" data-name="elden ring" data-genre="rpg">
+                    <div class="game-symbol">💍</div><small>OPEN WORLD · RPG</small>
+                    <h3>Elden Ring</h3>
+                    <p>Fantastik dunyo va qiyin raqiblar.</p><span class="game-tag">RPG</span>
+                </article>
+                <article class="games-card" data-name="bloodborne" data-genre="rpg">
+                    <div class="game-symbol">🌑</div><small>SOULSLIKE · ACTION</small>
+                    <h3>Bloodborne</h3>
+                    <p>Gotik muhit va tezkor janglar.</p><span class="game-tag">Action RPG</span>
+                </article>
+                <article class="games-card" data-name="mortal shell" data-genre="rpg">
+                    <div class="game-symbol">🪨</div><small>SOULSLIKE · RPG</small>
+                    <h3>Mortal Shell</h3>
+                    <p>Sirli olam va taktik janglar.</p><span class="game-tag">RPG</span>
+                </article>
+                <article class="games-card" data-name="the first berserker khazan" data-genre="action">
+                    <div class="game-symbol">🪓</div><small>ACTION · RPG</small>
+                    <h3>The First Berserker: Khazan</h3>
+                    <p>Shiddatli janglar va kuchli dushmanlar.</p><span class="game-tag">Action RPG</span>
+                </article>
+                <article class="games-card" data-name="wuthering waves" data-genre="rpg">
+                    <div class="game-symbol">🌊</div><small>OPEN WORLD · RPG</small>
+                    <h3>Wuthering Waves</h3>
+                    <p>Harakatga boy janglar va ochiq dunyo.</p><span class="game-tag">RPG</span>
+                </article>
+                <article class="games-card" data-name="genshin impact" data-genre="rpg">
+                    <div class="game-symbol">✨</div><small>OPEN WORLD · RPG</small>
+                    <h3>Genshin Impact</h3>
+                    <p>Fantastik dunyo va elementar janglar.</p><span class="game-tag">RPG</span>
+                </article>
+                <article class="games-card" data-name="where winds meet" data-genre="adventure">
+                    <div class="game-symbol">🍃</div><small>OPEN WORLD · WUXIA</small>
+                    <h3>Where Winds Meet</h3>
+                    <p>Sharqona jang san’ati va sarguzashtlar.</p><span class="game-tag">Adventure</span>
+                </article>
+                <article class="games-card" data-name="neverness to everness" data-genre="rpg">
+                    <div class="game-symbol">🌌</div><small>URBAN · RPG</small>
+                    <h3>Neverness to Everness</h3>
+                    <p>Zamonaviy muhitdagi fantastik sarguzasht.</p><span class="game-tag">RPG</span>
+                </article>
+                <article class="games-card" data-name="fortnite" data-genre="shooter">
+                    <div class="game-symbol">🪂</div><small>BATTLE ROYALE</small>
+                    <h3>Fortnite</h3>
+                    <p>Qurilish, otishmalar va omon qolish.</p><span class="game-tag">Shooter</span>
+                </article>
+                <article class="games-card" data-name="bright memory infinite" data-genre="shooter">
+                    <div class="game-symbol">💥</div><small>FPS · ACTION</small>
+                    <h3>Bright Memory: Infinite</h3>
+                    <p>Tezkor otishmalar va qilichli janglar.</p><span class="game-tag">FPS</span>
+                </article>
+                <article class="games-card" data-name="assetto corsa" data-genre="racing">
+                    <div class="game-symbol">🏎️</div><small>RACING · SIMULATOR</small>
+                    <h3>Assetto Corsa</h3>
+                    <p>Avtomobil boshqaruvi va poyga simulyatori.</p><span class="game-tag">Racing</span>
+                </article>
+                <article class="games-card" data-name="gran turismo" data-genre="racing">
+                    <div class="game-symbol">🏁</div><small>RACING · SIMULATOR</small>
+                    <h3>Gran Turismo</h3>
+                    <p>Avtomobillar va trek poygalari.</p><span class="game-tag">Racing</span>
+                </article>
+                <article class="games-card" data-name="spider man marvels spider-man" data-genre="action">
+                    <div class="game-symbol">🕸️</div><small>SUPERHERO · ACTION</small>
+                    <h3>Marvel’s Spider-Man</h3>
+                    <p>Shahar bo‘ylab harakat va superqahramon missiyalari.</p><span class="game-tag">Action</span>
+                </article>
+                <article class="games-card" data-name="final fantasy vii remake" data-genre="rpg">
+                    <div class="game-symbol">🗡️</div><small>RPG · ACTION</small>
+                    <h3>Final Fantasy VII Remake</h3>
+                    <p>Epik hikoya va uslubli qilich janglari.</p><span class="game-tag">RPG</span>
+                </article>
+                <article class="games-card" data-name="final fantasy vii rebirth" data-genre="rpg">
+                    <div class="game-symbol">🌠</div><small>RPG · ADVENTURE</small>
+                    <h3>Final Fantasy VII Rebirth</h3>
+                    <p>Cloud va do‘stlarining sarguzashtlari.</p><span class="game-tag">RPG</span>
+                </article>
+                <article class="games-card" data-name="ghost of tsushima" data-genre="action">
+                    <div class="game-symbol">🌸</div><small>OPEN WORLD · ACTION</small>
+                    <h3>Ghost of Tsushima</h3>
+                    <p>Samuraylar va qilichbozlik san’ati.</p><span class="game-tag">Action</span>
+                </article>
+                <article class="games-card" data-name="sekiro shadows die twice" data-genre="action">
+                    <div class="game-symbol">🥷</div><small>ACTION · SOULSLIKE</small>
+                    <h3>Sekiro: Shadows Die Twice</h3>
+                    <p>Tezkor qilich janglari va aniq vaqt tanlash.</p><span class="game-tag">Action</span>
+                </article>
+                <article class="games-card" data-name="forza horizon 5" data-genre="racing">
+                    <div class="game-symbol">🏜️</div><small>RACING · OPEN WORLD</small>
+                    <h3>Forza Horizon 5</h3>
+                    <p>Ochiq dunyoda avtomobil poygalari.</p><span class="game-tag">Racing</span>
+                </article>
+                <article class="games-card" data-name="red dead redemption 2" data-genre="adventure">
+                    <div class="game-symbol">🤠</div><small>OPEN WORLD · STORY</small>
+                    <h3>Red Dead Redemption 2</h3>
+                    <p>G‘arb olamidagi katta sarguzasht.</p><span class="game-tag">Story game</span>
+                </article>
+                <article class="games-card" data-name="the witcher 3 wild hunt" data-genre="rpg">
+                    <div class="game-symbol">🐺</div><small>FANTASY · RPG</small>
+                    <h3>The Witcher 3: Wild Hunt</h3>
+                    <p>Maxluqlar, sehr va hikoyaga boy dunyo.</p><span class="game-tag">RPG</span>
+                </article>
+                <article class="games-card" data-name="hollow knight" data-genre="other">
+                    <div class="game-symbol">🐞</div><small>INDIE · ADVENTURE</small>
+                    <h3>Hollow Knight</h3>
+                    <p>Sirli olam va kashfiyotlar.</p><span class="game-tag">Indie</span>
+                </article>
+                <article class="games-card" data-name="minecraft" data-genre="other">
+                    <div class="game-symbol">⛏️</div><small>SANDBOX · SURVIVAL</small>
+                    <h3>Minecraft</h3>
+                    <p>Qurish, kashf etish va omon qolish.</p><span class="game-tag">Sandbox</span>
+                </article>
+                <article class="games-card" data-name="call of duty warzone" data-genre="shooter">
+                    <div class="game-symbol">🎖️</div><small>FPS · SHOOTER</small>
+                    <h3>Call of Duty: Warzone</h3>
+                    <p>Katta janglar va jamoaviy taktika.</p><span class="game-tag">Shooter</span>
+                </article>
+                <article class="games-card" data-name="need for speed heat" data-genre="racing">
+                    <div class="game-symbol">🚦</div><small>RACING · ARCADE</small>
+                    <h3>Need for Speed Heat</h3>
+                    <p>Ko‘cha poygalari va avtomobillarni sozlash.</p><span class="game-tag">Racing</span>
+                </article>
+            </div>
+
+            <p class="no-games" id="noGames">Bu qidiruvga mos o‘yin topilmadi.</p>
+
+            <section class="games-extra">
+                <article id="reviews">
+                    <h3>🎮 O‘yin sharhlari</h3>
+                    <p>Grafika, FPS, boshqaruv va o‘ynashga arziydimi — shaxsiy sharhlarim shu yerda bo‘ladi.</p>
+                </article>
+                <article id="player-ids">
+                    <h3>🆔 Gaming ID’lar</h3>
+                    <p>O‘yinlardagi username va profillarim uchun alohida bo‘lim. Ma’lumotlar keyin qo‘shiladi.</p>
+                </article>
+                <article id="donate">
+                    <h3>💎 Donat xizmati</h3>
+                    <p>Kelajakda mavjud o‘yinlar uchun buyurtma va donat xizmati shu bo‘limda paydo bo‘lishi mumkin.</p>
+                </article>
+            </section>
+        </main>
+
+        <footer class="games-footer">© 2026 OWER GAMES · BUILT TO GO BEYOND.</footer>
+    </div>
+
+    <script>
+        const gameSearch = document.getElementById("gameSearch");
+        const gameFilter = document.getElementById("gameFilter");
+        const gameCards = document.querySelectorAll(".games-card");
+        const noGames = document.getElementById("noGames");
+
+        function filterGames() {
+            const query = gameSearch.value.toLowerCase().trim();
+            const genre = gameFilter.value;
+            let visible = 0;
+
+            gameCards.forEach(card => {
+                const name = card.dataset.name;
+                const category = card.dataset.genre;
+                const matchesName = name.includes(query);
+                const matchesGenre = genre === "all" || category === genre;
+                const show = matchesName && matchesGenre;
+
+                card.style.display = show ? "" : "none";
+                if (show) visible++;
+            });
+
+            noGames.style.display = visible ? "none" : "block";
+        }
+
+        gameSearch.addEventListener("input", filterGames);
+        gameFilter.addEventListener("change", filterGames);
+    </script>
+</body>
+
+</html>

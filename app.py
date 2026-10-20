@@ -7,5 +7,9 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+@app.route("/games")
+def games():
+    return render_template("games.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
