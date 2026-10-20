@@ -2592,3 +2592,29 @@ footer {
         transform: none;
     }
 }
+
+.game-cover {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    transition: transform 0.3s ease;
+}
+
+.games-card:hover .game-cover {
+    transform: scale(1.03);
+}
+
+.black-flag-cover {
+    object-position: center 56%;
+}
+
+.rogue-cover {
+    object-position: center 37%;
+}
+
+.gta-cover {
+    object-position: center 56%;
+}

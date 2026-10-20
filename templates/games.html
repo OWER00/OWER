@@ -300,35 +300,67 @@
 
             <div class="games-grid" id="gamesGrid">
                 <article class="games-card" data-name="blood strike" data-genre="shooter">
-                    <div class="game-symbol">🎯</div><small>MOBILE · FPS</small>
+                    <img class="game-cover"
+                        src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3199170/library_600x900.jpg"
+                        alt="Blood Strike o‘yini muqovasi" loading="lazy">
+                    <small>MOBILE · BATTLE ROYALE</small>
                     <h3>Blood Strike</h3>
-                    <p>Tezkor janglar va raqobatga boy shooter.</p><span class="game-tag">★ Mening o‘yinim</span>
+                    <p>Tezkor janglar, qurollar va jamoaviy kurash.</p>
+                    <span class="game-tag">FPS</span>
                 </article>
+
                 <article class="games-card" data-name="free fire" data-genre="shooter">
-                    <div class="game-symbol">🔥</div><small>MOBILE · BATTLE ROYALE</small>
+                    <img class="game-cover" src="{{ url_for('static', filename='free-fire.jpg') }}"
+                        alt="Free Fire o‘yini muqovasi" loading="lazy">
+                    <small>MOBILE · BATTLE ROYALE</small>
                     <h3>Free Fire</h3>
-                    <p>Omon qolish va jamoaviy janglar.</p><span class="game-tag">Gaming</span>
+                    <p>Omon qolish va jamoaviy janglar.</p>
+                    <span class="game-tag">Gaming</span>
                 </article>
-                <article class="games-card" data-name="roblox" data-genre="other">
-                    <div class="game-symbol">🧊</div><small>ONLINE · SANDBOX</small>
+
+                <article class="games-card" data-name="roblox" data-genre="adventure">
+                    <img class="game-cover"
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Roblox_%282025%29_%28App_Icon%29.svg"
+                        alt="Roblox mobil ilovasi belgisi" loading="lazy">
+
+
+
+                    <small>ONLINE · SANDBOX</small>
                     <h3>Roblox</h3>
-                    <p>Turli rejimlar, dunyolar va ijodiy tajribalar.</p><span class="game-tag">Gaming</span>
+                    <p>Cheksiz olamlar, ijodkorlik va do‘stlar bilan o‘yin.</p>
+                    <span class="game-tag">SANDBOX</span>
                 </article>
-                <article class="games-card" data-name="assassins creed black flag" data-genre="adventure">
-                    <div class="game-symbol">🏴‍☠️</div><small>ADVENTURE · ACTION</small>
-                    <h3>Assassin’s Creed IV: Black Flag</h3>
-                    <p>Dengiz sarguzashtlari va yashirin janglar.</p><span class="game-tag">Story game</span>
+
+                <article class="games-card" data-name="assassin's creed black flag" data-genre="action">
+                    <img class="game-cover  black-flag-cover"
+                        src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/242050/library_600x900.jpg"
+                        alt="Assassin's Creed IV Black Flag muqovasi" loading="lazy">
+                    <small>OPEN WORLD · ACTION ADVENTURE</small>
+                    <h3>Assassin's Creed IV: Black Flag</h3>
+                    <p>Edward Kenway bilan Karib dengizida qaroqchilar sarguzashti.</p>
+                    <span class="game-tag">ACTION</span>
                 </article>
-                <article class="games-card" data-name="assassins creed rogue" data-genre="adventure">
-                    <div class="game-symbol">🗡️</div><small>ADVENTURE · ACTION</small>
-                    <h3>Assassin’s Creed Rogue</h3>
-                    <p>Tarixiy sarguzasht va jangovar topshiriqlar.</p><span class="game-tag">Story game</span>
+
+                <article class="games-card" data-name="assassin's creed rogue" data-genre="action">
+                    <img class="game-cover rogue-cover"
+                        src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311560/library_600x900.jpg"
+                        alt="Assassin's Creed Rogue muqovasi" loading="lazy">
+                    <small>OPEN WORLD · ACTION ADVENTURE</small>
+                    <h3>Assassin's Creed Rogue</h3>
+                    <p>Shay Cormac bilan qorli shimoliy dengizlar va Assassinlarga qarshi sarguzasht.</p>
+                    <span class="game-tag">ACTION</span>
                 </article>
-                <article class="games-card" data-name="grand theft auto v gta 5" data-genre="action">
-                    <div class="game-symbol">🚘</div><small>OPEN WORLD · ACTION</small>
-                    <h3>GTA V</h3>
-                    <p>Katta ochiq dunyo va turli missiyalar.</p><span class="game-tag">Open world</span>
+
+                <article class="games-card" data-name="gta v" data-genre="action">
+                    <img class="game-cover gta-cover"
+                        src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/library_600x900.jpg"
+                        alt="Grand Theft Auto V muqovasi" loading="lazy">
+                    <small>OPEN WORLD · ACTION</small>
+                    <h3>Grand Theft Auto V</h3>
+                    <p>Los Santos shahrida sarguzashtlar, avtomobillar va erkin hayot.</p>
+                    <span class="game-tag">ACTION</span>
                 </article>
+
                 <article class="games-card" data-name="grand theft auto san andreas gta sa" data-genre="action">
                     <div class="game-symbol">🌴</div><small>OPEN WORLD · ACTION</small>
                     <h3>GTA: San Andreas</h3>
@@ -350,10 +382,15 @@
                     <p>Murakkab janglar va qorong‘i fantaziya.</p><span class="game-tag">RPG</span>
                 </article>
                 <article class="games-card" data-name="elden ring" data-genre="rpg">
-                    <div class="game-symbol">💍</div><small>OPEN WORLD · RPG</small>
+                    <img class="game-cover"
+                        src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/library_600x900.jpg"
+                        alt="Elden Ring o‘yini muqovasi" loading="lazy">
+                    <small>OPEN WORLD · RPG</small>
                     <h3>Elden Ring</h3>
-                    <p>Fantastik dunyo va qiyin raqiblar.</p><span class="game-tag">RPG</span>
+                    <p>Fantastik dunyo va qiyin raqiblar.</p>
+                    <span class="game-tag">RPG</span>
                 </article>
+
                 <article class="games-card" data-name="bloodborne" data-genre="rpg">
                     <div class="game-symbol">🌑</div><small>SOULSLIKE · ACTION</small>
                     <h3>Bloodborne</h3>
