@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OWER Projects | OWER Health</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .project-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 22px 80px;
+            color: #f5f3ff;
+        }
+
+        .project-hero {
+            padding: 48px 30px;
+            border: 1px solid #7545a8;
+            border-radius: 24px;
+            background: radial-gradient(ellipse at top right, #47216c, #111016 65%);
+            text-align: center;
+        }
+
+        .project-tag {
+            display: inline-block;
+            padding: 8px 14px;
+            border: 1px solid #a56bdf;
+            border-radius: 30px;
+            color: #dfbdff;
+            font-size: 13px;
+        }
+
+        .project-hero h1 {
+            margin: 22px 0 12px;
+            font-size: clamp(34px, 6vw, 60px);
+        }
+
+        .project-hero h1 span {
+            color: #c084fc;
+        }
+
+        .project-hero p {
+            max-width: 680px;
+            margin: 0 auto;
+            color: #c7c2d2;
+            line-height: 1.8;
+        }
+
+        .project-budget {
+            margin: 28px 0 8px;
+            color: #d8b4fe;
+            font-size: clamp(38px, 7vw, 58px);
+            font-weight: 800;
+        }
+
+        .project-status {
+            color: #fcd34d;
+            font-size: 13px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 24px;
+        }
+
+        .project-card {
+            padding: 26px;
+            border: 1px solid #30283d;
+            border-radius: 18px;
+            background: #15131b;
+        }
+
+        .project-card h2 {
+            margin-top: 0;
+            color: #d8b4fe;
+            font-size: 21px;
+        }
+
+        .project-card p,
+        .project-card li {
+            color: #c7c2d2;
+            line-height: 1.8;
+        }
+
+        .project-card ul {
+            padding-left: 20px;
+        }
+
+        .project-wide {
+            grid-column: 1 / -1;
+        }
+
+        .project-note {
+            margin-top: 22px;
+            padding: 18px;
+            border-left: 3px solid #a855f7;
+            background: #1b1525;
+            color: #c7c2d2;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 650px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-wide {
+                grid-column: auto;
+            }
+
+            .project-hero {
+                padding: 35px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="max-width: 1100px; margin: 20px auto; padding: 0 20px;">
+        <a href="{{ url_for('home') }}" style="color: #c084fc; text-decoration: none; font-weight: bold;">
+            ← Bosh sahifaga qaytish
+        </a>
+    </div>
+
+    <main class="project-page">
+        <div
+            style="min-height: 280px; margin-bottom: 25px; border: 2px dashed #8b5cf6; border-radius: 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #c084fc; background: rgba(139, 92, 246, 0.08); padding: 20px;">
+            <div style="font-size: 42px;">＋</div>
+            <h2>OWER Health — Test rasmi</h2>
+            <p>Bu joyga loyiha rasmi joylashtiriladi.</p>
+        </div>
+
+        <section class="project-hero">
+            <span class="project-tag">OWER PROJECTS · № 001</span>
+            <h1>OWER <span>Health</span></h1>
+            <p>
+                3-sonli texnikum uchun salomatlik xonasini zarur
+                jihozlar bilan ta'minlashga qaratilgan ijtimoiy loyiha.
+            </p>
+            <div class="project-budget">$1,000</div>
+            <div class="project-status">● Rejalashtirish bosqichi</div>
+        </section>
+
+        <section class="project-grid">
+            <article class="project-card">
+                <h2>01. Muammo</h2>
+                <p>
+                    Texnikumda o'quvchilar va xodimlarning salomatligiga
+                    e'tibor berish uchun zarur tibbiy jihozlar bilan
+                    ta'minlangan xona tashkil etish ehtiyoji mavjud.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <h2>02. Yechim</h2>
+                <p>
+                    Ajratilgan xonani kerakli jihozlar bilan ta'minlash,
+                    birinchi yordam vositalarini tartibli saqlash va
+                    malakali tibbiy xodim ishlashi uchun sharoit yaratish.
+                </p>
+            </article>
+
+            <article class="project-card">
+                <h2>03. Maqsadlar</h2>
+                <ul>
+                    <li>Tibbiyot xonasini tayyorlash.</li>
+                    <li>Zarur jihozlar va birinchi yordam vositalarini xarid qilish.</li>
+                    <li>O'quvchilar uchun xavfsizroq muhit yaratishga ko'maklashish.</li>
+                    <li>Xarajatlarni shaffof hisobga olish.</li>
+                </ul>
+            </article>
+
+            <article class="project-card">
+                <h2>04. Amalga oshirish</h2>
+                <ul>
+                    <li>Texnikum ma'muriyati bilan ehtiyojlarni aniqlash.</li>
+                    <li>Jihozlar va narxlar bo'yicha takliflar yig'ish.</li>
+                    <li>Budjetni tasdiqlash.</li>
+                    <li>Xaridlar va natijalarni hujjatlashtirish.</li>
+                </ul>
+            </article>
+
+            <article class="project-card project-wide">
+                <h2>05. Budjet rejasi</h2>
+                <p>
+                    Umumiy maqsadli budjet — $1,000. Aniq jihozlar,
+                    miqdorlar va narxlar texnikum ehtiyojlari hamda
+                    yetkazib beruvchilarning takliflari o'rganilgach
+                    belgilanadi.
+                </p>
+                <p>
+                    Har bir xarajat tasdiqlangan narxlar va tegishli
+                    hujjatlar asosida qayd etilishi rejalashtirilgan.
+                </p>
+            </article>
+
+            <article class="project-card project-wide">
+                <h2>06. Kutilayotgan natija</h2>
+                <p>
+                    Zarur jihozlar bilan ta'minlangan, tartibli va
+                    foydalanishga tayyor salomatlik xonasi. Loyiha
+                    yakunidagi natijalar haqiqiy bajarilgan ishlar
+                    asosida e'lon qilinadi.
+                </p>
+            </article>
+        </section>
+
+        <div class="project-note">
+            <strong>Shaffoflik:</strong> loyiha hozircha rejalashtirish
+            bosqichida. Moliyalashtirish olingani yoki xaridlar
+            bajarilgani haqida tasdiqlanmagan da'volar berilmaydi.
+        </div>
+    </main>
+</body>
+
+</html>

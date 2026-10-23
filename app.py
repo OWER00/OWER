@@ -51,6 +51,10 @@ def games():
     return render_template("games.html")
 
 
+@app.route("/projects")
+def projects():
+    return render_template("projects.html")
+
 @app.route("/games/blood-strike")
 def blood_strike():
     return render_template("blood-strike.html")
