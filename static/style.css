@@ -2622,3 +2622,37 @@ footer {
 .free-fire-cover {
     object-position: 70% center;
 }
+
+/* Blood Strike kartasiga kirish havolasi */
+.game-card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.game-card-link h3 {
+    color: inherit;
+}
+
+.game-card-link:hover h3 {
+    color: #c084fc;
+}
+
+.game-open-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding: 11px 14px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.game-open-button:hover {
+    background: linear-gradient(135deg, #c084fc, #9333ea);
+    transform: translateY(-2px);
+}

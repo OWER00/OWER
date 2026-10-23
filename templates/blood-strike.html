@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blood Strike — OWER GAMES</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='blood-strike.css') }}">
+</head>
+
+<body class="blood-page">
+
+    <nav class="blood-nav">
+        <a href="{{ url_for('games') }}" class="blood-logo">
+            <span>OWER</span> GAMES
+        </a>
+
+        <a href="{{ url_for('games') }}" class="blood-back">
+            ← Barcha o‘yinlar
+        </a>
+    </nav>
+
+    <main>
+
+        <section class="blood-hero">
+            <div class="blood-hero-content">
+                <span class="blood-label">
+                    FPS / BATTLE ROYALE
+                </span>
+
+                <h1>BLOOD <span>STRIKE</span></h1>
+
+                <h2>JANG MAYDONIDA O‘ZINGNI ISBOTLA.</h2>
+
+                <p>
+                    Har bir soniya muhim. Tezkor qarorlar qabul qil,
+                    qurollaringni tanla va raqiblaringdan ustun kel.
+                    Jang maydonida g‘alabaga erishish uchun tezlik,
+                    aniqlik va strategiyangni birlashtir.
+                </p>
+
+                <a href="#game-info" class="blood-button">
+                    O‘YIN HAQIDA BATAFSIL ↓
+                </a>
+            </div>
+
+            <div class="blood-hero-image">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3199170/library_600x900.jpg"
+                    alt="Blood Strike o‘yini" onerror="this.style.display='none'">
+            </div>
+        </section>
+
+        <section class="blood-details" id="game-info">
+            <div class="blood-section-heading">
+                <span>01 / O‘YIN HAQIDA</span>
+                <h2>JANGGA TAYYORMISAN?</h2>
+            </div>
+
+            <p class="blood-description">
+                Blood Strike — tezkor janglarga asoslangan
+                birinchi shaxs shooter o‘yini. Unda jang maydonida
+                harakatlanish, qurollardan foydalanish, jamoa bilan
+                hamkorlik qilish va to‘g‘ri taktika tanlash muhim.
+                Har bir to‘qnashuv mahoratingni sinovdan o‘tkazadi.
+            </p>
+
+            <div class="blood-feature-grid">
+                <article class="blood-feature">
+                    <span>01</span>
+                    <h3>TEZKOR JANG</h3>
+                    <p>
+                        Raqiblarni kuzat, tez harakatlan va
+                        vaziyatga qarab qaror qabul qil.
+                    </p>
+                </article>
+
+                <article class="blood-feature">
+                    <span>02</span>
+                    <h3>QUROL VA TAKTIKA</h3>
+                    <p>
+                        O‘yin uslubingga mos qurol tanla va
+                        jang strategiyangni ishlab chiq.
+                    </p>
+                </article>
+
+                <article class="blood-feature">
+                    <span>03</span>
+                    <h3>MAHORAT VA JAMOA</h3>
+                    <p>
+                        Nishonga olish mahoratingni oshir,
+                        jamoadoshlaring bilan hamkorlik qil.
+                    </p>
+                </article>
+            </div>
+        </section>
+        <section class="blood-modes">
+            <div class="blood-section-heading">
+                <span>02 / JANG USLUBLARI</span>
+                <h2>O‘Z USLUBINGNI TANLA.</h2>
+                <p>Har bir jang yangi sinov. Taktikangni tanla va maydonda o‘z ustunligingni ko‘rsat.</p>
+            </div>
+
+            <div class="blood-mode-grid">
+                <article class="blood-mode">
+                    <span class="blood-mode-number">01</span>
+                    <h3>BATTLE ROYALE</h3>
+                    <p>
+                        Katta jang maydonida omon qolish uchun kurash.
+                        Hududni kuzat, jihozlaringni tayyorla va
+                        raqiblaringdan ustun kel.
+                    </p>
+                </article>
+
+                <article class="blood-mode">
+                    <span class="blood-mode-number">02</span>
+                    <h3>TEAM BATTLE</h3>
+                    <p>
+                        Jamoa bilan harakatlan, bir-biringni qo‘llab-quvvatla
+                        va raqib jamoaga qarshi taktikangni namoyish et.
+                    </p>
+                </article>
+
+                <article class="blood-mode">
+                    <span class="blood-mode-number">03</span>
+                    <h3>QUROL VA JIHOZLAR</h3>
+                    <p>
+                        O‘zingga mos qurol va jihozlarni tanla.
+                        Nishonga olish, harakatlanish va vaziyatni
+                        to‘g‘ri baholash mahoratingni rivojlantir.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="blood-facts">
+            <div>
+                <span>O‘YIN JANRI</span>
+                <strong>FPS / Action</strong>
+            </div>
+
+            <div>
+                <span>O‘YIN USLUBI</span>
+                <strong>Raqobatli janglar</strong>
+            </div>
+
+            <div>
+                <span>PLATFORMALAR</span>
+                <strong>PC / Mobile</strong>
+            </div>
+
+            <div>
+                <span>FOYDALANUVCHI REYTINGI</span>
+                <strong>⭐ Baho berish ↓</strong>
+            </div>
+        </section>
+
+        <section class="blood-gallery">
+            <div class="blood-section-heading">
+                <span>02 / GALEREYA</span>
+                <h2>JANGNI HIS QIL.</h2>
+            </div>
+
+            <p>
+                O‘yin skrinshotlari bu yerga keyingi bosqichda qo‘shiladi.
+            </p>
+        </section>
+
+        <footer class="blood-footer">
+            <a href="{{ url_for('games') }}">← OWER GAMES</a>
+            <p>OWER — O‘YINLAR DUNYOSI</p>
+        </footer>
+
+    </main>
+    <section class="blood-rating" id="rating">
+        <div class="blood-section-heading">
+            <span>04 / COMMUNITY RATING</span>
+            <h2>O‘YINGA BAHO BER.</h2>
+            <p>Blood Strike haqidagi fikringni bildir.</p>
+        </div>
+
+        <div class="blood-rating-panel">
+            <div class="blood-rating-score">
+                <strong id="blood-rating-score">—</strong>
+                <span>/ 5</span>
+            </div>
+
+            <p id="blood-rating-total">Hozircha ovoz yo‘q</p>
+
+            <div class="blood-rating-breakdown" id="blood-rating-breakdown">
+                {% for star in [5, 4, 3, 2, 1] %}
+                <div class="blood-rating-row" data-rating="{{ star }}">
+                    <span>{{ star }} ★</span>
+                    <div class="blood-rating-bar">
+                        <span></span>
+                    </div>
+                    <strong>0%</strong>
+                    <small>(0)</small>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="blood-stars">
+                <button type="button" class="blood-star" data-rating="1" aria-label="1 yulduz">★</button>
+                <button type="button" class="blood-star" data-rating="2" aria-label="2 yulduz">★</button>
+                <button type="button" class="blood-star" data-rating="3" aria-label="3 yulduz">★</button>
+                <button type="button" class="blood-star" data-rating="4" aria-label="4 yulduz">★</button>
+                <button type="button" class="blood-star" data-rating="5" aria-label="5 yulduz">★</button>
+            </div>
+
+            <p class="blood-rating-message" aria-live="polite">
+                Baho berish uchun yulduzni bos.
+            </p>
+
+        </div>
+    </section>
+
+
+    </section>
+
+    <script>
+        const bloodStars = document.querySelectorAll(".blood-star");
+        const bloodMessage = document.querySelector(".blood-rating-message");
+        const bloodScore = document.querySelector("#blood-rating-score");
+        const bloodTotal = document.querySelector("#blood-rating-total");
+
+        let voterId = localStorage.getItem("ower_blood_strike_voter_id");
+
+        if (!voterId) {
+            voterId = crypto.randomUUID();
+            localStorage.setItem("ower_blood_strike_voter_id", voterId);
+        }
+
+
+        function renderRatings(data) {
+            bloodScore.textContent =
+                data.average === null ? "—" : data.average.toFixed(1);
+
+            bloodTotal.textContent =
+                `Jami ${data.total_votes} ta ovoz`;
+
+            data.stars.forEach((item) => {
+                const row = document.querySelector(
+                    `.blood-rating-row[data-rating="${item.rating}"]`
+                );
+
+                if (!row) return;
+
+                row.querySelector(".blood-rating-bar span").style.width =
+                    `${item.percent}%`;
+
+                row.querySelector("strong").textContent =
+                    `${item.percent}%`;
+
+                row.querySelector("small").textContent =
+                    `(${item.count})`;
+            });
+        }
+
+        async function loadRatings() {
+            try {
+                const response = await fetch(
+                    "/api/games/blood-strike/ratings"
+                );
+
+                if (!response.ok) {
+                    throw new Error("Reytinglarni yuklab bo‘lmadi.");
+                }
+
+                const data = await response.json();
+                renderRatings(data);
+            } catch (error) {
+                bloodMessage.textContent =
+                    "Reytinglarni yuklashda xatolik yuz berdi.";
+                console.error(error);
+            }
+        }
+
+        bloodStars.forEach((star) => {
+            star.addEventListener("click", async () => {
+                const rating = Number(star.dataset.rating);
+
+                bloodStars.forEach((item) => {
+                    item.classList.toggle(
+                        "active",
+                        Number(item.dataset.rating) <= rating
+                    );
+                });
+
+                bloodMessage.textContent = "Baho saqlanmoqda...";
+
+                bloodStars.forEach((item) => {
+                    item.disabled = true;
+                });
+
+                try {
+                    const response = await fetch(
+                        "/api/games/blood-strike/ratings",
+                        {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+
+                            body: JSON.stringify({
+                                rating: rating,
+                                voter_id: voterId
+                            })
+
+                        }
+                    );
+
+                    const data = await response.json();
+
+                    if (!response.ok) {
+                        throw new Error(
+                            data.error || "Bahoni saqlab bo‘lmadi."
+                        );
+                    }
+
+                    renderRatings(data);
+                    bloodMessage.textContent =
+                        "Bahoying saqlandi! Fikring uchun rahmat. 🔥";
+                } catch (error) {
+                    bloodMessage.textContent =
+                        "Bahoni saqlab bo‘lmadi. Server ishlayotganini tekshir.";
+                    console.error(error);
+                } finally {
+                    bloodStars.forEach((item) => {
+                        item.disabled = false;
+                    });
+                }
+            });
+        });
+
+        loadRatings();
+    </script>
+
+
+
+</body>
+
+</html>
