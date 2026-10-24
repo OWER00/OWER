@@ -1,5 +1,8 @@
 
 from flask import Flask, render_template, request, jsonify
+from dotenv import load_dotenv
+
+load_dotenv()
 import os
 import psycopg
 from psycopg.rows import dict_row
