@@ -137,6 +137,72 @@
             line-height: 1.9;
         }
 
+
+        /* OWER HEALTH BUDGET TABLE */
+
+        .budget-table-wrap {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 22px;
+            border: 1px solid #382b49;
+            border-radius: 14px;
+        }
+
+        .budget-table {
+            width: 100%;
+            min-width: 520px;
+            border-collapse: collapse;
+        }
+
+        .budget-table th,
+        .budget-table td {
+            padding: 13px 15px;
+            text-align: left;
+            border-bottom: 1px solid #30263c;
+            font-size: 14px;
+        }
+
+        .budget-table th {
+            color: #d8b4fe;
+            background: #21182c;
+        }
+
+        .budget-table td {
+            color: #ded8e8;
+        }
+
+        .budget-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .budget-total {
+            color: #d8b4fe !important;
+            font-weight: 800;
+        }
+
+        .budget-grand-total {
+            margin-top: 22px;
+            padding: 25px;
+            border: 1px solid #8751b5;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #21152e, #120e19);
+            text-align: center;
+        }
+
+        .budget-grand-total strong {
+            display: block;
+            margin: 10px 0;
+            color: #d8b4fe;
+            font-size: clamp(38px, 7vw, 54px);
+        }
+
+        .budget-small-note {
+            color: #a99db8;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+
         @media (max-width: 700px) {
             .project-page {
                 padding: 30px 14px 50px;
@@ -468,25 +534,162 @@
                 </ul>
             </article>
 
-            <!-- 03. BUDJET -->
+            <!-- 03. OWER HEALTH BUDGET -->
             <article class="project-card project-wide">
-                <h2>03. Loyiha budjeti</h2>
+                <h2>03. OWER Health — xaridlar smetasi</h2>
+
                 <p>
-                    Loyihaning umumiy budjeti 1 000 AQSH dollarini
-                    tashkil etadi. Ushbu mablag' faqat zarur tibbiy
-                    vositalar va jihozlarni xarid qilish uchun
-                    rejalashtirilgan.
+                    Grant mablag'i 3-sonli texnikum salomatlik xonasini
+                    zarur tibbiy jihozlar va vositalar bilan ta'minlash
+                    uchun rejalashtirilgan.
                 </p>
+
                 <p>
-                    Har bir mahsulotning miqdori, narxi va umumiy
-                    qiymati bozor takliflari o'rganilgach kiritiladi.
-                    Xaridlar belgilangan budjet doirasida amalga oshiriladi.
+                    <strong>Hisob-kitob kursi:</strong>
+                    1 USD = 11 964,27 so'm (12.11.2026).
                 </p>
+
+                <div class="budget-table-wrap">
+                    <table class="budget-table">
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Mahsulot nomi</th>
+                                <th>Miqdori</th>
+                                <th>Narxi (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td>Tibbiy kushetka</td>
+                                <td>1 dona</td>
+                                <td>$64.36</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>Avtomatik tonometr</td>
+                                <td>1 dona</td>
+                                <td>$19.14</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>Termometr</td>
+                                <td>1 dona</td>
+                                <td>$3.49</td>
+                            </tr>
+                            <tr>
+                                <td>04</td>
+                                <td>Stetoskop</td>
+                                <td>1 dona</td>
+                                <td>$3.50</td>
+                            </tr>
+                            <tr>
+                                <td>05</td>
+                                <td>Pulsoksimetr</td>
+                                <td>1 dona</td>
+                                <td>$23.90</td>
+                            </tr>
+                            <tr>
+                                <td>06</td>
+                                <td>Nitril qo'lqop</td>
+                                <td>100 dona</td>
+                                <td>$6.60</td>
+                            </tr>
+                            <tr>
+                                <td>07</td>
+                                <td>Tibbiy paxta</td>
+                                <td>50 g</td>
+                                <td>$0.33</td>
+                            </tr>
+                            <tr>
+                                <td>08</td>
+                                <td>Steril bint</td>
+                                <td>10 dona</td>
+                                <td>$2.11</td>
+                            </tr>
+                            <tr>
+                                <td>09</td>
+                                <td>Doka salfetka</td>
+                                <td>10 qadoq</td>
+                                <td>$2.76</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Tibbiy niqob</td>
+                                <td>50 dona</td>
+                                <td>$1.38</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Doka rulon</td>
+                                <td>10 m</td>
+                                <td>$3.26</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Steril qo'lqop</td>
+                                <td>10 dona</td>
+                                <td>$3.09</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Bir martalik fartuk</td>
+                                <td>50 dona</td>
+                                <td>$3.82</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>Tibbiy pol tarozisi</td>
+                                <td>1 dona</td>
+                                <td>$487.20</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>Bo'y o'lchagich</td>
+                                <td>1 dona</td>
+                                <td>$71.04</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>Zanglamaydigan tibbiy stol</td>
+                                <td>1 dona</td>
+                                <td>$146.27</td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>Tibbiy asboblar aravachasi</td>
+                                <td>1 dona</td>
+                                <td>$75.22</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="budget-total">
+                    Mahsulotlar jami: $917.49
+                </p>
+
                 <p>
-                    <strong>Hozirgi holat:</strong> xaridlar ro'yxati
-                    shakllantirilmoqda, narxlar aniqlashtirilmoqda.
+                    <strong>Yetkazib berish va narx o'zgarishi zaxirasi:</strong>
+                    $82.51
+                </p>
+
+                <div class="budget-grand-total">
+                    <span>OWER Health grant maqsadi</span>
+                    <strong>$1,000.00</strong>
+                    <span>Bir ming AQSH dollari</span>
+                </div>
+
+                <p class="budget-small-note">
+                    Izoh: narxlar dastlabki rejalashtirish hisobidir.
+                    Yakuniy xarid oldidan sotuvchi narxlari, mahsulot
+                    mavjudligi, yetkazib berish va tibbiy moslik qayta
+                    tekshiriladi. Zaxira mablag'i grant shartlariga
+                    muvofiq ishlatiladi. Hozircha xaridlar amalga oshirilmagan.
                 </p>
             </article>
+
 
             <!-- 04. SHAFFOFLIK -->
             <article class="project-card project-wide">
