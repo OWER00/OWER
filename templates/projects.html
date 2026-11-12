@@ -404,6 +404,767 @@
                 padding: 35px 20px;
             }
         }
+
+
+        /* ===== OWER HEALTH — PREMIUM DESIGN ===== */
+
+        .project-page {
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(112, 35, 190, 0.18), transparent 55%),
+                #08080d;
+            color: #f5f0ff;
+        }
+
+        .project-hero {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(168, 85, 247, 0.25);
+            border-radius: 26px;
+            background:
+                linear-gradient(135deg, rgba(91, 33, 182, 0.22), rgba(12, 10, 20, 0.96) 65%),
+                #100d18;
+            box-shadow: 0 20px 70px rgba(91, 33, 182, 0.12);
+        }
+
+        .project-hero::after {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            right: -100px;
+            top: -130px;
+            border-radius: 50%;
+            background: rgba(168, 85, 247, 0.18);
+            filter: blur(65px);
+            pointer-events: none;
+        }
+
+        .project-card {
+            background: linear-gradient(145deg, #17121f, #0e0d14);
+            border: 1px solid rgba(168, 85, 247, 0.16);
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
+            transition: transform .25s ease, border-color .25s ease,
+                box-shadow .25s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(192, 132, 252, 0.55);
+            box-shadow: 0 16px 40px rgba(126, 34, 206, 0.13);
+        }
+
+        .project-card h2,
+        .project-card h3 {
+            color: #e9d5ff;
+        }
+
+        .project-card p {
+            color: #c4b8d2;
+            line-height: 1.75;
+        }
+
+        .budget-table-wrap {
+            border: 1px solid rgba(168, 85, 247, 0.25);
+            border-radius: 18px;
+            overflow-x: auto;
+            background: #100d17;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 520px;
+        }
+
+        .budget-table th {
+            background: rgba(126, 34, 206, 0.2);
+            color: #e9d5ff;
+            font-weight: 700;
+        }
+
+        .budget-table th,
+        .budget-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.12);
+        }
+
+        .budget-table tr:hover td {
+            background: rgba(168, 85, 247, 0.06);
+        }
+
+        .budget-total,
+        .budget-grand-total {
+            color: #e9d5ff;
+            font-weight: 800;
+        }
+
+        .budget-grand-total {
+            font-size: 1.25rem;
+            text-shadow: 0 0 18px rgba(168, 85, 247, 0.35);
+        }
+
+        .budget-small-note {
+            color: #a99bb8;
+            font-size: 0.88rem;
+            line-height: 1.65;
+        }
+
+        .project-page a {
+            color: #c084fc;
+            transition: color .2s ease;
+        }
+
+        .project-page a:hover {
+            color: #e9d5ff;
+        }
+
+        .project-page img {
+            border-radius: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .project-hero {
+                border-radius: 18px;
+                padding: 22px 16px;
+            }
+
+            .project-card {
+                border-radius: 16px;
+            }
+
+            .budget-table th,
+            .budget-table td {
+                padding: 11px 12px;
+                font-size: 0.9rem;
+            }
+        }
+
+
+        /* ===== OWER HEALTH HERO DESIGN ===== */
+
+        .project-hero {
+            min-height: 390px;
+            padding: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            isolation: isolate;
+        }
+
+        .health-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+        }
+
+        .health-tag-dot {
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            margin-right: 7px;
+            border-radius: 50%;
+            background: #c084fc;
+            box-shadow: 0 0 12px #c084fc;
+        }
+
+        .health-hero-label {
+            margin-top: 35px;
+            color: #b98be9;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 4px;
+        }
+
+        .project-hero h1 {
+            margin: 12px 0;
+            font-size: clamp(42px, 7vw, 76px);
+            font-weight: 900;
+            letter-spacing: -3px;
+        }
+
+        .project-hero h1 span {
+            color: #bd82ff;
+            text-shadow: 0 0 28px rgba(168, 85, 247, 0.4);
+        }
+
+        .project-hero>.health-hero-content>p {
+            max-width: 540px;
+            color: #c4b8d2;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .health-hero-bottom {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .health-budget-box {
+            padding: 18px 24px;
+            min-width: 205px;
+            border: 1px solid rgba(192, 132, 252, 0.3);
+            border-radius: 16px;
+            background: rgba(168, 85, 247, 0.09);
+        }
+
+        .health-budget-label,
+        .health-budget-caption {
+            display: block;
+            color: #b9a7ca;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+        }
+
+        .health-budget-box .project-budget {
+            margin: 5px 0;
+            color: #e9d5ff;
+            font-size: 38px;
+            font-weight: 900;
+            text-shadow: 0 0 22px rgba(168, 85, 247, 0.4);
+        }
+
+        .health-budget-caption {
+            letter-spacing: 0;
+            font-size: 11px;
+        }
+
+        .health-status-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 18px;
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.035);
+        }
+
+        .health-status-icon {
+            color: #c084fc;
+            font-size: 25px;
+        }
+
+        .health-status-box strong,
+        .health-status-box small {
+            display: block;
+        }
+
+        .health-status-box strong {
+            color: #eee4fa;
+            font-size: 13px;
+        }
+
+        .health-status-box small {
+            margin-top: 5px;
+            color: #a99bb8;
+            font-size: 11px;
+        }
+
+        .health-hero-decoration {
+            position: absolute;
+            z-index: 1;
+            width: 310px;
+            height: 310px;
+            right: 45px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .health-orbit {
+            position: absolute;
+            inset: 15px;
+            border: 1px solid rgba(192, 132, 252, 0.2);
+            border-radius: 50%;
+        }
+
+        .health-orbit-one {
+            transform: rotate(35deg) scaleX(0.65);
+        }
+
+        .health-orbit-two {
+            transform: rotate(-35deg) scaleX(0.65);
+        }
+
+        .health-cross {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            color: rgba(192, 132, 252, 0.55);
+            font-size: 150px;
+            font-weight: 200;
+        }
+
+        .health-glow {
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            top: 85px;
+            left: 85px;
+            border-radius: 50%;
+            background: rgba(126, 34, 206, 0.2);
+            filter: blur(45px);
+        }
+
+        @media (max-width: 700px) {
+            .project-hero {
+                min-height: auto;
+                padding: 28px 20px;
+            }
+
+            .health-hero-decoration {
+                width: 180px;
+                height: 180px;
+                right: -65px;
+                top: 80px;
+                transform: none;
+                opacity: 0.5;
+            }
+
+            .health-hero-label {
+                margin-top: 26px;
+            }
+
+            .project-hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .health-hero-bottom {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+            .health-budget-box {
+                min-width: 0;
+            }
+        }
+
+
+        /* ===== OWER HEALTH INFORMATION CARDS ===== */
+
+        .health-info-card {
+            position: relative;
+            overflow: hidden;
+            padding: 30px;
+            background:
+                linear-gradient(145deg, rgba(30, 19, 43, 0.98), rgba(13, 12, 19, 0.98));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .health-info-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg,
+                    #d8b4fe,
+                    #9333ea,
+                    transparent);
+            opacity: 0.8;
+        }
+
+        .health-card-heading {
+            display: flex;
+            align-items: center;
+            gap: 17px;
+            position: relative;
+        }
+
+        .health-card-number {
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            color: #e9d5ff;
+            background: rgba(168, 85, 247, 0.15);
+            border: 1px solid rgba(192, 132, 252, 0.35);
+            font-size: 17px;
+            font-weight: 900;
+        }
+
+        .health-card-label {
+            display: block;
+            margin-bottom: 5px;
+            color: #b98be9;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .health-card-heading h2 {
+            margin: 0;
+            color: #f0e5ff;
+            font-size: 21px;
+        }
+
+        .health-card-symbol {
+            margin-left: auto;
+            color: rgba(192, 132, 252, 0.65);
+            font-size: 30px;
+        }
+
+        .health-card-divider {
+            height: 1px;
+            margin: 23px 0;
+            background: linear-gradient(90deg,
+                    rgba(192, 132, 252, 0.45),
+                    rgba(192, 132, 252, 0.02));
+        }
+
+        .health-info-card>p {
+            color: #c7bbd2;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .health-equipment-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            padding: 0;
+            margin: 23px 0;
+            list-style: none;
+        }
+
+        .health-equipment-list li {
+            position: relative;
+            padding: 13px 14px 13px 34px;
+            border: 1px solid rgba(168, 85, 247, 0.12);
+            border-radius: 11px;
+            background: rgba(168, 85, 247, 0.045);
+            color: #c9bfd4;
+            font-size: 12px;
+            line-height: 1.7;
+            transition: background .2s ease, border-color .2s ease;
+        }
+
+        .health-equipment-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 13px;
+            top: 14px;
+            color: #c084fc;
+            font-size: 12px;
+        }
+
+        .health-equipment-list li:hover {
+            background: rgba(168, 85, 247, 0.1);
+            border-color: rgba(192, 132, 252, 0.35);
+        }
+
+        .health-equipment-list li strong {
+            color: #e9d5ff;
+        }
+
+        .health-info-footer {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding-top: 18px;
+            margin-top: 20px;
+            border-top: 1px solid rgba(168, 85, 247, 0.13);
+            color: #9d8cab;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 1.3px;
+        }
+
+        @media (max-width: 700px) {
+            .health-info-card {
+                padding: 22px 17px;
+            }
+
+            .health-card-heading {
+                gap: 12px;
+            }
+
+            .health-card-number {
+                width: 40px;
+                height: 40px;
+            }
+
+            .health-card-heading h2 {
+                font-size: 17px;
+            }
+
+            .health-card-symbol {
+                font-size: 23px;
+            }
+
+            .health-equipment-list {
+                grid-template-columns: 1fr;
+            }
+
+            .health-info-footer {
+                font-size: 8px;
+            }
+        }
+
+
+        /* ===== OWER HEALTH PREMIUM BUDGET ===== */
+
+        .health-budget-card {
+            position: relative;
+            overflow: hidden;
+            padding: 32px;
+            border: 1px solid rgba(160, 100, 255, 0.18);
+            background:
+                radial-gradient(circle at 95% 5%,
+                    rgba(132, 55, 255, 0.12),
+                    transparent 32%),
+                linear-gradient(145deg, #111019, #09090e);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+        }
+
+        .health-budget-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg,
+                    transparent,
+                    #a855f7,
+                    #d8b4fe,
+                    transparent);
+            opacity: 0.8;
+        }
+
+        .health-budget-description {
+            color: #c4bfd0;
+            line-height: 1.8;
+            margin: 22px 0;
+        }
+
+        .health-exchange-rate {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px 16px;
+            padding: 15px 18px;
+            margin: 22px 0;
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 12px;
+            background: rgba(130, 70, 210, 0.08);
+        }
+
+        .health-exchange-rate span {
+            color: #a78bfa;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.3px;
+        }
+
+        .health-exchange-rate strong {
+            color: #f1eaff;
+            font-size: 14px;
+        }
+
+        .health-exchange-rate small {
+            color: #898397;
+            margin-left: auto;
+        }
+
+        /* Jadval */
+
+        .budget-table-wrap {
+            width: 100%;
+            overflow-x: auto;
+            margin: 25px 0;
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 14px;
+            background: rgba(8, 8, 14, 0.8);
+            scrollbar-width: thin;
+            scrollbar-color: #8538cf #17131f;
+        }
+
+        .budget-table {
+            width: 100%;
+            min-width: 580px;
+            border-collapse: collapse;
+            color: #e9e4f2;
+        }
+
+        .budget-table thead {
+            background: linear-gradient(90deg,
+                    rgba(112, 48, 190, 0.3),
+                    rgba(75, 35, 125, 0.2));
+        }
+
+        .budget-table th {
+            padding: 17px 15px;
+            color: #c9a6ff;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.7px;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .budget-table td {
+            padding: 14px 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.045);
+            color: #d0cbd9;
+            font-size: 13px;
+        }
+
+        .budget-table tbody tr {
+            transition: background 0.25s ease;
+        }
+
+        .budget-table tbody tr:hover {
+            background: rgba(151, 80, 255, 0.09);
+        }
+
+        .budget-table td:first-child {
+            color: #9870c9;
+            font-weight: 700;
+        }
+
+        .budget-table td:nth-child(2) {
+            color: #f0eafa;
+            font-weight: 600;
+        }
+
+        .budget-table td:last-child {
+            color: #c9a3ff;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        /* Budjet hisob-kitobi */
+
+        .health-budget-summary {
+            display: grid;
+            gap: 12px;
+            margin: 25px 0 18px;
+            padding: 20px;
+            border: 1px solid rgba(168, 85, 247, 0.16);
+            border-radius: 13px;
+            background: rgba(255, 255, 255, 0.025);
+        }
+
+        .health-budget-line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            color: #bdb6ca;
+            font-size: 14px;
+        }
+
+        .health-budget-line strong {
+            color: #e8d8ff;
+            white-space: nowrap;
+            font-size: 15px;
+        }
+
+        /* Umumiy grant summasi */
+
+        .budget-grand-total {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 9px;
+            padding: 30px 20px;
+            margin-top: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(181, 117, 255, 0.4);
+            border-radius: 16px;
+            background:
+                radial-gradient(circle at center,
+                    rgba(145, 65, 255, 0.2),
+                    transparent 75%),
+                linear-gradient(135deg, #1a1028, #100d18);
+            text-align: center;
+            box-shadow:
+                0 0 25px rgba(137, 63, 220, 0.1),
+                inset 0 0 25px rgba(137, 63, 220, 0.05);
+        }
+
+        .budget-grand-total span:first-child {
+            color: #c4a0f5;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .budget-grand-total strong {
+            color: #ffffff;
+            font-size: clamp(34px, 6vw, 48px);
+            font-weight: 900;
+            letter-spacing: -1.5px;
+            text-shadow: 0 0 22px rgba(176, 117, 255, 0.45);
+        }
+
+        .budget-grand-total span:last-child {
+            color: #a79bb8;
+            font-size: 12px;
+        }
+
+        .budget-small-note {
+            margin-top: 20px;
+            padding: 14px 16px;
+            border-left: 3px solid #8950c9;
+            border-radius: 5px;
+            background: rgba(135, 78, 190, 0.07);
+            color: #9991a7;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        /* Telefon ekranlari */
+
+        @media (max-width: 600px) {
+            .health-budget-card {
+                padding: 20px 14px;
+            }
+
+            .health-exchange-rate {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 7px;
+            }
+
+            .health-exchange-rate small {
+                margin-left: 0;
+            }
+
+            .budget-table th,
+            .budget-table td {
+                padding: 12px 10px;
+                font-size: 12px;
+            }
+
+            .health-budget-summary {
+                padding: 15px;
+            }
+
+            .health-budget-line {
+                align-items: flex-start;
+                font-size: 12px;
+            }
+
+            .health-budget-line strong {
+                font-size: 13px;
+            }
+
+            .budget-grand-total {
+                padding: 25px 12px;
+            }
+        }
     </style>
 </head>
 
@@ -418,15 +1179,44 @@
 
 
         <section class="project-hero">
-            <span class="project-tag">OWER PROJECTS · № 001</span>
-            <h1>OWER <span>Health</span></h1>
-            <p>
-                3-sonli texnikum uchun salomatlik xonasini zarur
-                jihozlar bilan ta'minlashga qaratilgan ijtimoiy loyiha.
-            </p>
-            <div class="project-budget">$1,000</div>
-            <div class="project-status">● Rejalashtirish bosqichi</div>
+            <div class="health-hero-content">
+                <span class="project-tag">
+                    <span class="health-tag-dot"></span>
+                    OWER PROJECTS · № 001
+                </span>
+
+                <div class="health-hero-label">
+                    SOCIAL INITIATIVE
+                </div>
+
+                <h1>OWER <span>Health</span></h1>
+
+                <p>
+                    3-sonli texnikum uchun salomatlik xonasini zarur
+                    jihozlar bilan ta'minlashga qaratilgan ijtimoiy loyiha.
+                </p>
+
+                <div class="health-hero-bottom">
+                    <div class="health-budget-box">
+                        <span class="health-budget-label">LOYIHA BUDJETI</span>
+                        <div class="project-budget">$1,000</div>
+                        <span class="health-budget-caption">
+                            Tibbiy jihozlar va zarur vositalar uchun
+                        </span>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="health-hero-decoration">
+                <div class="health-orbit health-orbit-one"></div>
+                <div class="health-orbit health-orbit-two"></div>
+                <div class="health-cross">+</div>
+                <div class="health-glow"></div>
+            </div>
         </section>
+
 
         <!-- OWER HEALTH PHOTO GALLERY -->
         <section class="health-gallery">
@@ -496,30 +1286,56 @@
         <section class="project-grid">
 
             <!-- 01. LOYIHA HAQIDA -->
-            <article class="project-card project-wide">
-                <h2>01. Loyiha haqida</h2>
+            <article class="project-card project-wide health-info-card">
+                <div class="health-card-heading">
+                    <span class="health-card-number">01</span>
+                    <div>
+                        <span class="health-card-label">ABOUT THE PROJECT</span>
+                        <h2>Loyiha haqida</h2>
+                    </div>
+                    <span class="health-card-symbol">✦</span>
+                </div>
+
+                <div class="health-card-divider"></div>
+
                 <p>
                     OWER Health — 3-sonli texnikum hududidagi salomatlik
                     xonasini shifokor faoliyati uchun zarur tibbiy
                     jihozlar va vositalar bilan ta'minlashga qaratilgan
                     ijtimoiy loyiha.
                 </p>
+
                 <p>
                     Loyiha texnikum o'quvchilari, xodimlari hamda
                     yaqin atrofdagi aholining tibbiy yordamdan
                     foydalanish imkoniyatlarini yaxshilashni maqsad qiladi.
                 </p>
+
+                <div class="health-info-footer">
+                    <span>OWER HEALTH</span>
+                    <span>IJTIMOIY LOYIHA · 001</span>
+                </div>
             </article>
 
             <!-- 02. TIBBIY XARIDLAR -->
-            <article class="project-card project-wide">
-                <h2>02. Shifokor uchun zarur tibbiy vositalar</h2>
+            <article class="project-card project-wide health-info-card">
+                <div class="health-card-heading">
+                    <span class="health-card-number">02</span>
+                    <div>
+                        <span class="health-card-label">MEDICAL EQUIPMENT</span>
+                        <h2>Shifokor uchun zarur tibbiy vositalar</h2>
+                    </div>
+                    <span class="health-card-symbol">✚</span>
+                </div>
+
+                <div class="health-card-divider"></div>
+
                 <p>
                     Quyidagi xaridlar ro'yxati shifokor bilan
                     maslahatlashish asosida shakllantirilgan.
                 </p>
 
-                <ul>
+                <ul class="health-equipment-list">
                     <li><strong>Tonometr:</strong> avtomatik, yelkaga taqiladigan sifatli model — 1 dona.</li>
                     <li><strong>Paxta:</strong> tibbiy paxta.</li>
                     <li><strong>Spirt:</strong> tibbiy maqsadlar uchun.</li>
@@ -532,22 +1348,39 @@
                     <li><strong>Fiziologik eritmalar:</strong> shifokor belgilaydigan tur va miqdorda.</li>
                     <li><strong>Asosiy dori-darmonlar:</strong> shifokor tasdiqlaydigan ro'yxat bo'yicha.</li>
                 </ul>
+
+                <div class="health-info-footer">
+                    <span>11 TA ASOSIY BAND</span>
+                    <span>SHIFOKOR TAVSIYASI ASOSIDA</span>
+                </div>
             </article>
 
-            <!-- 03. OWER HEALTH BUDGET -->
-            <article class="project-card project-wide">
-                <h2>03. OWER Health — xaridlar smetasi</h2>
 
-                <p>
+            <!-- 03. OWER HEALTH BUDGET -->
+            <article class="project-card project-wide health-budget-card">
+
+                <div class="health-card-heading">
+                    <span class="health-card-number">03</span>
+                    <div>
+                        <span class="health-card-label">PROJECT INVESTMENT PLAN</span>
+                        <h2>OWER Health — xaridlar smetasi</h2>
+                    </div>
+                    <span class="health-card-symbol">＄</span>
+                </div>
+
+                <div class="health-card-divider"></div>
+
+                <p class="health-budget-description">
                     Grant mablag'i 3-sonli texnikum salomatlik xonasini
                     zarur tibbiy jihozlar va vositalar bilan ta'minlash
                     uchun rejalashtirilgan.
                 </p>
 
-                <p>
-                    <strong>Hisob-kitob kursi:</strong>
-                    1 USD = 11 964,27 so'm (12.11.2026).
-                </p>
+                <div class="health-exchange-rate">
+                    <span>HISOB-KITOB KURSI</span>
+                    <strong>1 USD = 11 964,27 so'm</strong>
+                    <small>12.11.2026</small>
+                </div>
 
                 <div class="budget-table-wrap">
                     <table class="budget-table">
@@ -666,17 +1499,19 @@
                     </table>
                 </div>
 
-                <p class="budget-total">
-                    Mahsulotlar jami: $917.49
-                </p>
-
-                <p>
-                    <strong>Yetkazib berish va narx o'zgarishi zaxirasi:</strong>
-                    $82.51
-                </p>
+                <div class="health-budget-summary">
+                    <div class="health-budget-line">
+                        <span>Mahsulotlar jami</span>
+                        <strong>$917.47</strong>
+                    </div>
+                    <div class="health-budget-line">
+                        <span>Yetkazib berish va narx o'zgarishi zaxirasi</span>
+                        <strong>$82.53</strong>
+                    </div>
+                </div>
 
                 <div class="budget-grand-total">
-                    <span>OWER Health grant maqsadi</span>
+                    <span>OWER HEALTH GRANT MAQSADI</span>
                     <strong>$1,000.00</strong>
                     <span>Bir ming AQSH dollari</span>
                 </div>
@@ -688,7 +1523,9 @@
                     tekshiriladi. Zaxira mablag'i grant shartlariga
                     muvofiq ishlatiladi. Hozircha xaridlar amalga oshirilmagan.
                 </p>
+
             </article>
+
 
 
             <!-- 04. SHAFFOFLIK -->
